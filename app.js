@@ -32,7 +32,7 @@ for (let i = 0; i < boxes.length; i++) {
 
     const scoreDisplay = document.getElementById('score');
     const messageDisplay = document.getElementById('message');
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.da');
 
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -47,11 +47,11 @@ for (let i = 0; i < boxes.length; i++) {
       if (timeLeft === 0) {
         clearInterval(timer);
         messageDisplay.textContent = `Час вийшов! Ваш результат: ${score} очок.`;
-        buttons.forEach(button => button.disabled = true);
+        buttons.forEach(button => button.textContent = "Час закінчився");
       }
     }, 1000);
 
-// 4 
+// 4
 
 const coolinput = document.querySelector(".coolinput");
 const kokobutton = document.querySelector(".kokobutton");
