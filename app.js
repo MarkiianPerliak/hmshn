@@ -47,7 +47,7 @@ for (let i = 0; i < boxes.length; i++) {
       if (timeLeft === 0) {
         clearInterval(timer);
         messageDisplay.textContent = `Час вийшов! Ваш результат: ${score} очок.`;
-        buttons.forEach(button => button.textContent = "Час закінчився");
+        buttons.forEach(button => button.disabled = true);
       }
     }, 1000);
 
